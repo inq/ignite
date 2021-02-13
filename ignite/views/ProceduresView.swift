@@ -12,7 +12,6 @@ struct ProceduresView: View {
   @State var isPresented = false
 
   @Environment(\.managedObjectContext) private var viewContext
-
   @FetchRequest(
     sortDescriptors: [NSSortDescriptor(keyPath: \Procedure.createdAt, ascending: false)],
     animation: .default)

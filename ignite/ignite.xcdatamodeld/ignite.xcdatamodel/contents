@@ -6,7 +6,8 @@
         <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="steps" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Step" inverseName="procedure" inverseEntity="Step"/>
     </entity>
-    <entity name="Step" representedClassName=".Step" parentEntity="Procedure" syncable="YES" codeGenerationType="class">
+    <entity name="Step" representedClassName=".Step" syncable="YES" codeGenerationType="class">
+        <attribute name="action" optional="YES" attributeType="String"/>
         <attribute name="content" optional="YES" attributeType="String"/>
         <attribute name="ordinal" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="procedure" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Procedure" inverseName="steps" inverseEntity="Procedure"/>
@@ -16,6 +17,6 @@
     </entity>
     <elements>
         <element name="Procedure" positionX="-63" positionY="-9" width="128" height="89"/>
-        <element name="Step" positionX="-63" positionY="-9" width="128" height="74"/>
+        <element name="Step" positionX="-63" positionY="-9" width="128" height="89"/>
     </elements>
 </model>

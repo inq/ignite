@@ -19,7 +19,6 @@ struct ProcedureItemView: View {
         Text(itemFormatter.string(from: procedure.createdAt!)).font(.system(size: 10)).frame(
           maxWidth: .infinity, alignment: .trailing)
       }
-      .background(Color.white)
     }.sheet(isPresented: $showingDetail) {
       ProcedureItemDetailView(procedure: procedure, showing: $showingDetail)
     }
